@@ -20,4 +20,9 @@ export class ErrorService {
   set currentError(message: string) {
     this.error.next(message);
   }
+
+  // display some UI component with the current error
+  displayCurrentError() {
+    alert(this.currentError);
+  }
 }
