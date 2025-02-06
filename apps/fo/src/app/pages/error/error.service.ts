@@ -6,12 +6,18 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class ErrorService {
 
-  // TODO: if you to encapsulate the error, you can make it private
-  error = new BehaviorSubject('No error');
+  // error is a private(like POO encapsulation)
+  private error = new BehaviorSubject('No error');
 
   constructor() { }
 
-  setError(message: string) {
+  // TS getter
+  get currentError() {
+    return this.error.value;
+  }
+
+  // TS setter
+  set currentError(message: string) {
     this.error.next(message);
   }
 }

@@ -1,10 +1,9 @@
 import { Component, inject } from '@angular/core';
 import { ErrorService } from './error.service';
-import { AsyncPipe } from '@angular/common';
 
 @Component({
   selector: 'fo-error',
-  imports: [AsyncPipe],
+  imports: [],
   templateUrl: './error.component.html',
   styleUrl: './error.component.scss'
 })
@@ -16,8 +15,8 @@ export class ErrorComponent {
   // constructor(private errorService: ErrorService) { }
 
   // $ suffix => observable
-  get error$ () {
-    return this.errorService.error;
+  get error () {
+    return this.errorService.currentError;
   }
 
 }

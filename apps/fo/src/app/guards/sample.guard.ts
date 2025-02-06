@@ -9,7 +9,7 @@ export const SampleGuard = () => {
   if(!ALLOW) {
     // redirect to error page
     const errorService = inject(ErrorService);
-    errorService.setError('You are not allowed to access this page');
+    errorService.currentError = 'You are not allowed to access this page';
     const router = inject(Router);
     router.navigate(['/error']);
     return false;
