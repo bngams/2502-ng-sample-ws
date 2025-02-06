@@ -1,1 +1,10 @@
-<p>header works!</p>
+<header>
+  <div>ACME</div>
+  <nav>
+    <ul>
+      <li *ngFor="let item of menuItems">
+        <a [routerLink]="item.path" routerLinkActive="active">{{ item.title }}</a>
+      </li>
+    </ul>
+  </nav>
+</header>
