@@ -11,6 +11,7 @@ export class HeaderComponent {
   // TODO: create a type or interface
   menuItems = [
     { title: 'Home', path: '/home' },
-    { title: 'About', path: '/about' }
+    { title: 'About', path: '/about' },
+    { title: 'Catalog', path: '/catalog' }
   ]
 }
